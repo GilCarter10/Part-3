@@ -15,4 +15,9 @@ public class Archer : Villager
 
 
     }
+
+    public override ChestType CanOpen()
+    {
+        return ChestType.Archer;
+    }
 }
