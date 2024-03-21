@@ -12,6 +12,7 @@ public class CharacterControl : MonoBehaviour
     public static Villager SelectedVillager { get; private set; }
     public TMP_Dropdown dropdown;
     public List<Villager> Villagers = new List<Villager>();
+    Vector3 newScale;
 
     public static void SetSelectedVillager(Villager villager)
     {
@@ -48,6 +49,11 @@ public class CharacterControl : MonoBehaviour
 
 
 
+    }
+
+    public void Scale(Single value)
+    {
+        SelectedVillager.transform.localScale = new Vector3(value, value, value);
     }
 
 }
