@@ -1,22 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class Disc : MonoBehaviour
 {
 
     public Vector2 direction;
-    float power;
-    float maxPower;
-    public float speed = 50;
+    public float speed = -100;
     public Rigidbody2D rb;
 
+    public bool moveable = true;
     
 
     void Start()
     {
-        power = -2f;
     }
 
     private void FixedUpdate()
@@ -25,6 +24,8 @@ public class Disc : MonoBehaviour
         {
             rb.AddForce(direction * speed, ForceMode2D.Impulse);
             direction = Vector2.zero;
+            moveable = false;
+
         }
     }
 
@@ -46,7 +47,12 @@ public class Disc : MonoBehaviour
 
     private void OnMouseUp()
     {
-        direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * power;
+        if (moveable)
+        {
+            direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+            moveable = false;
+        }
     }
+
 
 }
