@@ -8,23 +8,25 @@ public class Disc : MonoBehaviour
 {
 
     public Vector2 direction;
-    public float speed = -100;
-    public Rigidbody2D rb;
+    public float power;
+    Rigidbody2D rb;
 
-    public bool moveable = true;
+    public bool moveable = false;
+    public bool finished = false;
     
 
     void Start()
     {
+        power = -150f;
+        rb = GetComponent<Rigidbody2D>();   
     }
 
     private void FixedUpdate()
     {
         if (direction != Vector2.zero)
         {
-            rb.AddForce(direction * speed, ForceMode2D.Impulse);
+            rb.AddForce(direction, ForceMode2D.Impulse);
             direction = Vector2.zero;
-            moveable = false;
 
         }
     }
@@ -49,8 +51,10 @@ public class Disc : MonoBehaviour
     {
         if (moveable)
         {
-            direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+            Debug.Log("YUP");
+            direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized * power;
             moveable = false;
+            finished = true;
         }
     }
 

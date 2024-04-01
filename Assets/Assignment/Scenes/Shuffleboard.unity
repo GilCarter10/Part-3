@@ -137,12 +137,12 @@ GameObject:
   - component: {fileID: 8719361}
   - component: {fileID: 8719360}
   m_Layer: 0
-  m_Name: RedDisc3
+  m_Name: RedDisc1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &8719360
 Rigidbody2D:
   serializedVersion: 4
@@ -218,9 +218,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 8719360}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &8719363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 8719359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: 8, y: -1.7, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -335,14 +335,14 @@ MonoBehaviour:
   vCamera: {fileID: 829070483}
   discNum: 0
   Discs:
-  - {fileID: 2039817936}
-  - {fileID: 1144459764}
-  - {fileID: 2015721186}
-  - {fileID: 1295195339}
-  - {fileID: 1356289524}
-  - {fileID: 8719359}
-  - {fileID: 897113342}
-  - {fileID: 1877038448}
+  - {fileID: 2039817939}
+  - {fileID: 1144459767}
+  - {fileID: 2015721189}
+  - {fileID: 1295195342}
+  - {fileID: 1356289527}
+  - {fileID: 8719362}
+  - {fileID: 897113345}
+  - {fileID: 1877038451}
 --- !u!1 &230775033
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,8 +460,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 2039817941}
-  m_Follow: {fileID: 2039817941}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.7444625
@@ -490,7 +490,7 @@ Transform:
   m_GameObject: {fileID: 829070482}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000025123251, y: 0.00000008352808, z: -2.0984968e-15, w: 1}
-  m_LocalPosition: {x: -0.0000016705616, y: -2.3893518, z: -10}
+  m_LocalPosition: {x: -0.0000016705616, y: -2.3893518, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -531,7 +531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &897113343
 Rigidbody2D:
   serializedVersion: 4
@@ -607,9 +607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 897113343}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &897113346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 897113342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: -8, y: -6.2, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -691,12 +691,12 @@ GameObject:
   - component: {fileID: 1144459766}
   - component: {fileID: 1144459765}
   m_Layer: 0
-  m_Name: RedDisc1
+  m_Name: RedDisc2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1144459765
 Rigidbody2D:
   serializedVersion: 4
@@ -772,9 +772,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 1144459765}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &1144459768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -836,7 +836,7 @@ Transform:
   m_GameObject: {fileID: 1144459764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: 8, y: -3.2, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -856,12 +856,12 @@ GameObject:
   - component: {fileID: 1295195341}
   - component: {fileID: 1295195340}
   m_Layer: 0
-  m_Name: RedDisc2
+  m_Name: RedDisc3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1295195340
 Rigidbody2D:
   serializedVersion: 4
@@ -937,9 +937,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 1295195340}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &1295195343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1001,7 +1001,7 @@ Transform:
   m_GameObject: {fileID: 1295195339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: 8, y: -4.7, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1094,7 +1094,7 @@ Transform:
   m_GameObject: {fileID: 1320753507}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000025123251, y: 0.00000008352808, z: -2.0984968e-15, w: 1}
-  m_LocalPosition: {x: -0.0000033411231, y: -2.3893514, z: -10}
+  m_LocalPosition: {x: -0.0000018376177, y: -2.3893518, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1148,12 +1148,12 @@ GameObject:
   - component: {fileID: 1356289526}
   - component: {fileID: 1356289525}
   m_Layer: 0
-  m_Name: BlueDisc3
+  m_Name: BlueDisc2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1356289525
 Rigidbody2D:
   serializedVersion: 4
@@ -1229,9 +1229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 1356289525}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &1356289528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1293,7 +1293,7 @@ Transform:
   m_GameObject: {fileID: 1356289524}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: -8, y: -3.2, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_ScreenY: 0.577
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.983
-  m_DeadZoneHeight: 0.576
+  m_DeadZoneHeight: 0.07
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.983
@@ -1406,7 +1406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1877038449
 Rigidbody2D:
   serializedVersion: 4
@@ -1482,9 +1482,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 1877038449}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &1877038452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1546,7 +1546,7 @@ Transform:
   m_GameObject: {fileID: 1877038448}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: 8, y: -6.2, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1566,12 +1566,12 @@ GameObject:
   - component: {fileID: 2015721188}
   - component: {fileID: 2015721187}
   m_Layer: 0
-  m_Name: BlueDisc2
+  m_Name: BlueDisc3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &2015721187
 Rigidbody2D:
   serializedVersion: 4
@@ -1647,9 +1647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 2015721187}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &2015721190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1711,7 +1711,7 @@ Transform:
   m_GameObject: {fileID: 2015721186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: -8, y: -4.7, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1812,9 +1812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  speed: 100
-  rb: {fileID: 2039817937}
+  power: 0
   moveable: 1
+  finished: 0
 --- !u!212 &2039817940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1876,7 +1876,7 @@ Transform:
   m_GameObject: {fileID: 2039817936}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.1199996, z: 0}
+  m_LocalPosition: {x: -8, y: -1.7, z: 0}
   m_LocalScale: {x: 0.096793205, y: 0.096793205, z: 0.096793205}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2003,10 +2003,10 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -21.7495, y: -54.657204}
-  - {x: 22.360075, y: -54.5123}
-  - {x: 22.430676, y: 54.405323}
-  - {x: -22.254086, y: 54.515892}
-  - {x: -22.077011, y: -54.153446}
+  - {x: 20.695734, y: -54.750065}
+  - {x: 20.053047, y: 54.405323}
+  - {x: -20.589745, y: 54.515892}
+  - {x: -21.125961, y: -54.39121}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -2019,12 +2019,12 @@ SceneRoots:
   - {fileID: 2063414325}
   - {fileID: 187677122}
   - {fileID: 2039817941}
-  - {fileID: 2015721191}
   - {fileID: 1356289529}
+  - {fileID: 2015721191}
   - {fileID: 897113347}
+  - {fileID: 8719364}
   - {fileID: 1144459769}
   - {fileID: 1295195344}
-  - {fileID: 8719364}
   - {fileID: 1877038453}
   - {fileID: 829070484}
   - {fileID: 230775035}
