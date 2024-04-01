@@ -5,13 +5,17 @@ using UnityEngine;
 public class BlueDisc : Disc
 {
 
-    void Start()
-    {
+    public static int blueScore;
 
+    private void Update()
+    {
+        Debug.Log(blueScore);
     }
 
-    void Update()
+
+    public override void UpdateScore(int scoreValue)
     {
-        
+        base.UpdateScore(scoreValue);
     }
+
 }

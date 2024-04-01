@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class RedDisc : Disc
 {
+    public static int redScore;
 
-    void Start()
+
+    public override void UpdateScore(int scoreValue)
     {
-
+        base.UpdateScore(scoreValue);
     }
 
-    void Update()
-    {
 
-    }
 }

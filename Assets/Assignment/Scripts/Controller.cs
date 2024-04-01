@@ -12,7 +12,7 @@ public class Controller : MonoBehaviour
     //public int blueDiscsLeft = 4;
     public int discNum = 0;
     int oldDiscNum;
-    public List<Disc> Discs;
+    public List<Mover> Discs;
 
 
     void Start()
@@ -22,11 +22,15 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Discs[discNum].moveable);
-        if (Discs[discNum].finished == true)
+
+        if (discNum <= 8)
         {
-            StartCoroutine(ChangeDisc());
-            oldDiscNum = discNum;
+            if (Discs[discNum].finished == true)
+            {
+                oldDiscNum = discNum;
+                StartCoroutine(ChangeDisc());
+
+            }
         }
     }
 
@@ -41,13 +45,11 @@ public class Controller : MonoBehaviour
 
     IEnumerator ChangeDisc()
     {
+        discNum++;
         yield return new WaitForSeconds(5f);
-        while (discNum == oldDiscNum)
-        {
-            discNum ++;
-            SpawnDisc();
-            yield return null;
-        }
+        SpawnDisc();
+        yield return null;
+        
     }
 
 }
