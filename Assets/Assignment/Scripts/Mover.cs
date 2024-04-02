@@ -8,7 +8,7 @@ public class Mover : MonoBehaviour
 {
 
     public Vector2 direction;
-    public float power;
+    float power = -150f;
     Rigidbody2D rb;
 
     public bool moveable = false;
@@ -16,7 +16,6 @@ public class Mover : MonoBehaviour
 
     void Start()
     {
-        power = -150f;
         //moveable = false;
         rb = GetComponent<Rigidbody2D>();
 
@@ -28,7 +27,7 @@ public class Mover : MonoBehaviour
         {
             rb.AddForce(direction, ForceMode2D.Impulse);
             direction = Vector2.zero;
-
+            
         }
     }
 

@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class RedDisc : Disc
 {
-    public static int redScore;
+    public static int redScore = 0;
+    int personalScore = 0;
 
 
     public override void UpdateScore(int scoreValue)
     {
         base.UpdateScore(scoreValue);
+
+        if (tempScore != personalScore)
+        {
+            redScore += personalScore;
+        }
     }
 
 
