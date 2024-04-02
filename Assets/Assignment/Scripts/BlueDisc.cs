@@ -18,4 +18,6 @@ public class BlueDisc : Disc
         base.UpdateScore(scoreValue);
     }
 
+    //add function that adds personal score to blueScore
+
 }
