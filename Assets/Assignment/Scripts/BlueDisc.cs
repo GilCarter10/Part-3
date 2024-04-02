@@ -1,28 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class BlueDisc : Disc
 {
 
     public static int blueScore = 0;
-    int personalScore = 0;
 
-
-    private void Update()
-    {
-        Debug.Log(blueScore);
-    }
+    int oldScore = 0;
 
     public override void UpdateScore(int scoreValue)
     {
         base.UpdateScore(scoreValue);
-
-        if (tempScore != personalScore)
+        
+        if (currentScore != oldScore)
         {
-            blueScore += personalScore;
+            blueScore += currentScore;
+            blueScore -= oldScore;
+            oldScore = currentScore;
+
         }
+
     }
+
+    
 
 }

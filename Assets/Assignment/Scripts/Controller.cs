@@ -36,7 +36,6 @@ public class Controller : MonoBehaviour
 
     void SpawnDisc()
     {
-        //Instantiate(Discs[discNum]);
         Discs[discNum].gameObject.transform.position = new Vector3 (0, -3.12f, 0);
         vCamera.Follow = Discs[discNum].gameObject.transform;
         Discs[discNum].moveable = true;

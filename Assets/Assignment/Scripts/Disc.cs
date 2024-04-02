@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Disc : MonoBehaviour
 {
-
-    public int tempScore = 0;
+    public int currentScore = 0;
 
     public virtual void UpdateScore(int scoreValue)
     {
-        tempScore = scoreValue;
+        currentScore = scoreValue;
     }
-
 }

@@ -15,10 +15,5 @@ public class Trigger : MonoBehaviour
             
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Disc disc = collision.GetComponent<Disc>();
-        disc.UpdateScore(0);
-    }
 
 }
