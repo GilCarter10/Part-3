@@ -11,21 +11,17 @@ public class StartEndState : MonoBehaviour
 
     public GameObject TitleObject;
     public GameObject EndObject;
-    public GameObject PlayAgainObject;
 
     static TextMeshProUGUI Title;
     static TextMeshProUGUI End;
-    static TextMeshProUGUI PlayAgain;
 
     private void Start()
     {
         Title = TitleObject.GetComponent<TextMeshProUGUI>();
         End = EndObject.GetComponent<TextMeshProUGUI>();
-        PlayAgain = PlayAgainObject.GetComponent<TextMeshProUGUI>();
 
         Title.gameObject.SetActive(true);
         End.gameObject.SetActive(false);
-        PlayAgain.gameObject.SetActive(false);
     }
 
     public static void CheckState(int num)
@@ -43,30 +39,23 @@ public class StartEndState : MonoBehaviour
         if (num == 4) //end
         {
             End.gameObject.SetActive(true);
-            PlayAgain.gameObject.SetActive(true);
 
             if (BlueDisc.blueScore > RedDisc.redScore)
             {
-                End.color = new Color(114, 156, 231);
+                End.color = Color.blue;
                 End.text = "BLUE WINS";
             }
 
             if (RedDisc.redScore > BlueDisc.blueScore)
             {
-                End.color = new Color(189, 66, 67);
-                End.text = "RED WINDS";
+                End.color = Color.red;
+                End.text = "RED WINS";
             }
 
             if (BlueDisc.blueScore == RedDisc.redScore)
             {
                 End.color = Color.white;
                 End.text = "TIE GAME";
-            }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Controller.ResetGame();
-                Controller.stateNum = 2;
             }
 
         }

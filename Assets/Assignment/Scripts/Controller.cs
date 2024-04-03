@@ -8,17 +8,17 @@ using UnityEngine.UI;
 public class Controller : MonoBehaviour
 {
     public CinemachineVirtualCamera vCamera;
-    
+
+    public static int stateNum = 1;
 
     public int discNum = 0;
-    public static int stateNum = 1;
     int oldDiscNum;
+
     public List<Mover> Discs;
 
     public Image underlineP1;
     public Image underlineP2;
 
-    static bool reset = false;
 
     void Start()
     {
@@ -28,10 +28,9 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-
         StartEndState.CheckState(stateNum);
 
-        if (0 < discNum && discNum < 8)
+        if (0 <= discNum && discNum < 8)
         {
             if (Discs[discNum].finished == true)
             {
@@ -45,18 +44,6 @@ public class Controller : MonoBehaviour
         {
             SpawnDisc();
             stateNum++;
-        }
-
-        if (discNum >= 8)
-        {
-            stateNum = 4;
-        }
-
-        if (reset)
-        {
-            discNum = 0;
-            SpawnDisc();
-            reset = false;
         }
 
     }
@@ -83,16 +70,20 @@ public class Controller : MonoBehaviour
     {
         discNum++;
         yield return new WaitForSeconds(5f);
-        SpawnDisc();
+        if (discNum < 8)
+        {
+            SpawnDisc();
+        }
+        else
+        {
+            stateNum = 4;
+        }
+
+        
         yield return null;
         
     }
 
-
-    public static void ResetGame()
-    {
-        reset = true;
-    }
 
 
 }
